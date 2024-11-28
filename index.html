@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Excel Processor</title>
+  <!-- Include TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6">
+  <h1 class="text-2xl font-bold mb-4">Excel File Processor</h1>
+
+  <!-- File Upload -->
+  <div class="mb-4">
+    <label class="block mb-2">Upload Excel Files:</label>
+    <input type="file" id="file-input" multiple accept=".xlsx, .xls" class="border p-2">
+  </div>
+
+  <!-- Row Deletion -->
+  <div class="mb-4">
+    <label class="block mb-2">Number of Rows to Delete from Top:</label>
+    <input type="number" id="row-delete-input" value="0" min="0" class="border p-2">
+  </div>
+
+  <!-- Column Filter -->
+  <div class="mb-4">
+    <label class="flex items-center">
+      <input type="checkbox" id="column-filter-toggle" class="mr-2">
+      Enable Column Filter
+    </label>
+    <label class="block mt-2">Column Number to Check for Empty Values:</label>
+    <input type="number" id="column-number-input" value="1" min="1" class="border p-2">
+  </div>
+
+  <!-- Download Combined File -->
+  <div class="mb-4">
+    <button id="download-btn" class="bg-blue-500 text-white px-4 py-2 rounded">Download Combined File</button>
+  </div>
+
+  <!-- Previews -->
+  <div id="previews" class="space-y-4"></div>
+
+  <!-- Include xlsx library -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <!-- Your JavaScript file -->
+  <script src="app.js"></script>
+</body>
+</html>
